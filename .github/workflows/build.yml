@@ -120,6 +120,7 @@ jobs:
         run: |
           xcodebuild \
             -project "RSDKv4 ios.xcodeproj" \
+            CODE_SIGNING_ALLOWED=NO \
             build
   v4-linux:
     runs-on: ubuntu-latest
@@ -148,6 +149,7 @@ jobs:
         with:
           name: v4-linux
           path: linux.tar.gz
+
 
 
 
