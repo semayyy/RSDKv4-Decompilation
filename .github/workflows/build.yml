@@ -108,6 +108,7 @@ jobs:
         with:
           name: v4-android
           path: ./android/app/build/outputs/apk
+  # NOT DONE
   v4-ios:
     runs-on: macos-latest
     steps:
@@ -147,4 +148,5 @@ jobs:
         with:
           name: v4-linux
           path: linux.tar.gz
+
 
