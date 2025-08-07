@@ -116,6 +116,9 @@ jobs:
         uses: actions/checkout@v4
         with:
           submodules: recusrive
+      - name: Download RSDK
+        run: |
+          curl -L -o dependencies/ios/Data.rsdk https://archive.org/download/data_20231229/Data.rsdk
       - name: Build
         run: |
           xcodebuild \
@@ -149,6 +152,7 @@ jobs:
         with:
           name: v4-linux
           path: linux.tar.gz
+
 
 
 
