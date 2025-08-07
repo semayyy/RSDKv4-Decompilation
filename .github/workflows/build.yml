@@ -108,6 +108,18 @@ jobs:
         with:
           name: v4-android
           path: ./android/app/build/outputs/apk
+  v4-ios:
+    runs-on: macos-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: recusrive
+      - name: Build
+        run: |
+          xcodebuild \
+            -project "RSDKv4 ios.xcodeproj" \
+            build
   v4-linux:
     runs-on: ubuntu-latest
     steps:
@@ -135,3 +147,4 @@ jobs:
         with:
           name: v4-linux
           path: linux.tar.gz
+
