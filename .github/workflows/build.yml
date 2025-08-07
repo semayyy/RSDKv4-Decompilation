@@ -2,7 +2,7 @@ name: Build RSDKv4
 on:
   push:
     branches:
-      - main
+      - ios
 
 env:
   GENERAL_FLAGS: "-DRETRO_DISABLE_PLUS=ON -DCMAKE_BUILD_TYPE=Release"
@@ -148,5 +148,6 @@ jobs:
         with:
           name: v4-linux
           path: linux.tar.gz
+
 
 
